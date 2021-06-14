@@ -218,7 +218,7 @@ QLineEdit::hover{
         <string/>
        </property>
        <property name="text">
-        <string>C:\Users\José Messias\Desktop\video</string>
+        <string/>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Normal</enum>

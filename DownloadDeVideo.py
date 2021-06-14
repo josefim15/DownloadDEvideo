@@ -25,7 +25,7 @@ def baixar_video():
     print('OK')
     
 app=QtWidgets.QApplication([])
-file=uic.loadUi('C:/Users/José Messias/Desktop/PYQT5/Baixar Videos/baixar.ui')
+file=uic.loadUi('baixar.ui')
 file.pushButton.clicked.connect(baixar_video)
 
 file.show()
