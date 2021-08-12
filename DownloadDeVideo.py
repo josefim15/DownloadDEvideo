@@ -1,6 +1,7 @@
 from pytube import YouTube
 from PyQt5 import uic, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
+import os
 
 def baixar_video():
     
@@ -11,8 +12,21 @@ def baixar_video():
     tube = YouTube(url)
     #DOWNLOAD DO VÍDEO
     
-    video = tube.streams.get_highest_resolution()
-    video.download(diretorio)
+    botaoAudio = file.radioButton.isChecked()
+    botaoVideo = file.radioButton_2.isChecked()
+    
+    if botaoVideo:
+        video = tube.streams.get_highest_resolution()
+        video.download(diretorio)
+    
+    elif botaoAudio:
+        audio = tube.streams.filter(only_audio=True).first()
+        RemoverFormatoMpfour = audio.download(output_path=diretorio)
+        
+        base, ext = os.path.splitext(RemoverFormatoMpfour)
+        NovoFormatoDeArquivo = base + '.mp3'
+        os.rename(RemoverFormatoMpfour, NovoFormatoDeArquivo)
+        
     
     #CAIXA DE MENSSAGEM
     
@@ -20,7 +34,7 @@ def baixar_video():
     msg.setWindowTitle('DOWNLOAD')
     msg.setText('Download concluído')
     msg.setIcon(QMessageBox.Information)
-    
+        
     x = msg.exec_()
     print('OK')
     

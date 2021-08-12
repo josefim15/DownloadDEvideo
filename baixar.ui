@@ -117,14 +117,13 @@
        </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
-	border: 3px;
 	border-radius: 5px;
 	background-color: rgb(18, 18, 18);
 	color: rgb(162, 162, 162);
+	padding: 10px
 }
 QPushButton::hover{
-	border:2px solid rgb(45,45,45);
-	
+	border:2px solid rgb(15,15,15);
 	border-color: rgb(255, 255, 255);
 }</string>
        </property>
@@ -257,6 +256,53 @@ QLineEdit::hover{
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>190</y>
+         <width>82</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+	border: 3px;
+	border-radius: 5px;
+	background-color: rgb(18, 18, 18);
+	color: rgb(162, 162, 162);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>AUDIO</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>190</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+	border: 3px;
+	border-radius: 5px;
+	background-color: rgb(18, 18, 18);
+	color: rgb(162, 162, 162);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>AUDIO E VÍDEO</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
